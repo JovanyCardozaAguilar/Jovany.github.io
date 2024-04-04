@@ -15,4 +15,3 @@ jobs:
 
       - name: Run Jest tests
         run: npm run test
-      - run: ls -l
