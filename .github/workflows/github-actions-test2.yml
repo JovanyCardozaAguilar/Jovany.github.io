@@ -1,6 +1,6 @@
 name: Github Jest Tests
-run-name: ${{ github.actor }} is Jest tests
-on: [push]
+run-name: ${{ github.actor }} is running Jest tests
+on: [push, pull_request]
 jobs:
   unit-tests:
     name: Tests
