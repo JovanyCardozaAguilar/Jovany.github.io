@@ -1,18 +1,23 @@
 name: Github Jest Tests
-run-name: ${{ github.actor }} is testing with Jest
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
 
-        - name: Install dependencies
-          run: npm install
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        - name: Install Jest
-          run: npm install --save-dev jest
+      - name: Install dependencies
+        run: npm install
 
-        - name: Run Jest tests
-          run: npm test
+      - name: Install Jest
+        run: npm install --save-dev jest
+
+      - name: Run Jest tests
+        run: npm test
