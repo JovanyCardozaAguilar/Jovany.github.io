@@ -1,21 +1,15 @@
 name: Github Jest Tests
-run-name: ${{ github.actor }} is Jest tests 🚀
+run-name: ${{ github.actor }} is Jest tests
 on: [push]
 jobs:
-  tests:
+  unit-tests:
+    name: Tests
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/cechkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
+            node-version: "20"
       - name: Install dependencies
         run: npm install
 
