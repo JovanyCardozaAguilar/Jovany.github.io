@@ -1,0 +1,9 @@
+name: Github Jest Tests
+run-name: ${{ github.actor }} is testing with Jest
+on: [push]
+jobs:
+  Jest-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Jest tests
+        run: npm test
