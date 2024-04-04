@@ -1,9 +1,9 @@
-function sum(a, b) {
+function sum(a : number, b : number) {
     return a + b;
   }
 
-function minus(a, b) {
+function minus(a : number, b : number) {
   return a - b;
 }
 
-export {sum, minus}
+export {sum, minus};
